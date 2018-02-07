@@ -3,27 +3,15 @@
 import sys
 import pickle
 
-import collections
-
-import operator
-
 import matplotlib.pyplot
-from sklearn import preprocessing, decomposition, svm
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import VarianceThreshold, SelectKBest, chi2, f_classif, SelectFromModel
-from sklearn.grid_search import GridSearchCV
-from sklearn.linear_model import Lasso
-from sklearn.metrics import accuracy_score
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn import preprocessing, decomposition
+from sklearn.feature_selection import SelectKBest
 from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import GaussianNB
-from sklearn.preprocessing import PolynomialFeatures, StandardScaler
-from sklearn.svm import SVC, LinearSVC
-from sklearn.tree import DecisionTreeClassifier
 
 sys.path.append("../tools/")
 
-from feature_format import featureFormat, targetFeatureSplit
+from tools.feature_format import featureFormat, targetFeatureSplit
 from tester import dump_classifier_and_data, test_classifier
 
 
